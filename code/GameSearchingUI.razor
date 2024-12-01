@@ -1,0 +1,35 @@
+@using Sandbox;
+@using Sandbox.UI;
+@inherits PanelComponent
+@namespace Sandbox
+
+<root>
+	@if (GameNetwork.State == GameState.Loading)
+	{
+		<div>
+			<h2>Searching for players</h2>
+			<p>@(GameNetwork.P_PlayersCount)</p>
+		</div>
+	}
+
+</root>
+
+@code
+{
+
+	[Property] private GameNetwork GameNetwork { get; set;  }
+
+	[Property, TextArea] public string MyStringValue { get; set; } = "Hello World!";
+
+
+	[Broadcast]
+	public void ChangeState(bool state) {
+		GameObject.Enabled = state;
+	}
+
+
+	/// <summary>
+	/// the hash determines if the system should be rebuilt. If it changes, it will be rebuilt
+	/// </summary>
+	protected override int BuildHash() => System.HashCode.Combine(GameNetwork.P_PlayersCount, GameNetwork.State);
+}

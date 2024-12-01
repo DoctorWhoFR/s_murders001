@@ -1,0 +1,37 @@
+@using Sandbox;
+@using Sandbox.UI;
+@inherits PanelComponent
+@namespace Sandbox
+
+<root>
+	<div class="title">@(Player.playerType) | @(Player.Id)</div>
+</root>
+
+@code
+{
+	[Property] public CustomPlayerController Player { get; set; } = new();
+
+	protected override void OnUpdate()
+	{
+		base.OnUpdate();
+		IEnumerable<CustomPlayerController> players = Scene.GetAllComponents<CustomPlayerController>();
+
+		if(players != null && players.Count() != 0){
+
+			var player = players.Where((controller) => { return controller.Id == Connection.Local.Id; }).First();
+
+			if (player != null)
+			{
+				Player = player;
+			}
+		}
+
+		
+		// Log.Info(Connection.Local.Id);
+	}
+
+	/// <summary>
+	/// the hash determines if the system should be rebuilt. If it changes, it will be rebuilt
+	/// </summary>
+	protected override int BuildHash() => System.HashCode.Combine(Player, Player.Hash());
+}

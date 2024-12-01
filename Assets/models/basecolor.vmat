@@ -1,0 +1,14 @@
+
+Layer0
+{
+	shader "shaders/complex.shader_c"
+
+	TextureColor "models/basecolor.png"
+	TextureAmbientOcclusion "materials/default/default_ao.tga"
+	TextureNormal "models/sniper1.fbm/533090a2dc2341d2bebfa3ed6f5f60f5_n_sniper_mat_sniper_normal.png"
+	TextureRoughness "models/sniper1.fbm/4a413e6b43234e0c99929d57b84b87e4_r_sniper_mat_sniper_roughness.png"
+	F_METALNESS_TEXTURE 1
+	F_SPECULAR 1
+	TextureMetalness "models/sniper1.fbm/e591e3e6da9940538638b2e78f509ca3_r_sniper_mat_sniper_metallic.png"
+
+}

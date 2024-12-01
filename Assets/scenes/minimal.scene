@@ -1,0 +1,755 @@
+{
+  "__guid": "325a4042-0696-43dd-a79d-dcc314299ba3",
+  "GameObjects": [
+    {
+      "__guid": "2ea48560-3189-4b61-9112-5459d212da9d",
+      "Flags": 0,
+      "Name": "Scene Information",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.SceneInformation",
+          "__guid": "90586cef-7fc3-4bf5-bc8f-6e01a4a74bb4",
+          "Changes": "",
+          "Description": "",
+          "SceneTags": "",
+          "Title": "minimal"
+        }
+      ]
+    },
+    {
+      "__guid": "bfc59c12-1ed2-4f91-8956-a95a315eac3c",
+      "Flags": 0,
+      "Name": "Sun",
+      "Rotation": "-0.0729315,0.4822396,0.1305433,0.8631827",
+      "Tags": "light_directional,light",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.DirectionalLight",
+          "__guid": "d3659344-a90d-48fa-927a-095f70fe041f",
+          "FogMode": "Enabled",
+          "FogStrength": 1,
+          "LightColor": "0.94419,0.97767,1,1",
+          "Shadows": true,
+          "SkyColor": "0.2532,0.32006,0.35349,1"
+        }
+      ]
+    },
+    {
+      "__guid": "00344a8c-fa5e-45ae-b12a-10bb781a1dc3",
+      "Flags": 0,
+      "Name": "2D Skybox",
+      "Tags": "skybox",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.SkyBox2D",
+          "__guid": "de79e9e0-5c37-4c54-ac67-bfcdb1d5483b",
+          "SkyIndirectLighting": true,
+          "SkyMaterial": "materials/skybox/skybox_day_01.vmat",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Sandbox.EnvmapProbe",
+          "__guid": "f3e304db-baab-4c1a-a4ec-8442585c2d62",
+          "Texture": "textures/cubemaps/default2.vtex",
+          "Bounds": {
+            "Mins": "-512,-512,-512",
+            "Maxs": "512,512,512"
+          },
+          "DelayBetweenUpdates": 0.1,
+          "Feathering": 0.02,
+          "FrameInterval": 5,
+          "MaxDistance": 512,
+          "MultiBounce": false,
+          "Projection": "Sphere",
+          "RenderDynamically": false,
+          "TintColor": "1,1,1,1",
+          "UpdateStrategy": "OnEnabled",
+          "ZFar": 4096,
+          "ZNear": 16
+        }
+      ]
+    },
+    {
+      "__guid": "6ad70641-3c6c-4402-9c85-9a4969af4764",
+      "Flags": 0,
+      "Name": "Plane",
+      "Scale": "5,5,5",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "0b6a18bf-fdb8-4661-970e-ef635bfa9baa",
+          "BodyGroups": 18446744073709551615,
+          "CreateAttachments": false,
+          "MaterialOverride": "materials/default.vmat",
+          "Model": "models/dev/plane.vmdl",
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderType": "On",
+          "Tint": "0.39546,0.51163,0.27128,1"
+        },
+        {
+          "__type": "Sandbox.BoxCollider",
+          "__guid": "0715cb55-1733-4f5e-8560-c288b8695631",
+          "Center": "0,0,-5",
+          "IsTrigger": false,
+          "Scale": "100,100,10",
+          "Static": false,
+          "SurfaceVelocity": "0,0,0"
+        }
+      ]
+    },
+    {
+      "__guid": "3c2490ef-54a0-49bb-8f13-490e40aa51d1",
+      "Flags": 0,
+      "Name": "Cube",
+      "Position": "-11.39726,-150.1717,48.6288",
+      "Scale": "1,6.11167,1.89779",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "b9121ffa-617c-4ccc-a2aa-8acc98727590",
+          "BodyGroups": 18446744073709551615,
+          "CreateAttachments": false,
+          "MaterialOverride": "materials/default.vmat",
+          "Model": "models/dev/box.vmdl",
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderType": "On",
+          "Tint": "1,0,0.93333,1"
+        },
+        {
+          "__type": "Sandbox.BoxCollider",
+          "__guid": "8bb3ebcf-1ec9-4b20-bf31-4aece0950008",
+          "Center": "0,0,0",
+          "IsTrigger": false,
+          "Scale": "50,50,50",
+          "Static": false,
+          "SurfaceVelocity": "0,0,0"
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "4aaa0334-6785-4716-9bae-869559ea6e10",
+          "AngularDamping": 0,
+          "Gravity": true,
+          "LinearDamping": 0,
+          "Locking": {
+            "X": false,
+            "Y": false,
+            "Z": false,
+            "Pitch": false,
+            "Yaw": false,
+            "Roll": false
+          },
+          "MassCenterOverride": "0,0,0",
+          "MassOverride": 0,
+          "MotionEnabled": true,
+          "OverrideMassCenter": false,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
+        }
+      ]
+    },
+    {
+      "__guid": "3ee1c9f4-07be-4e0b-8b23-67bee2d8ec8a",
+      "Flags": 0,
+      "Name": "Camera",
+      "Position": "-267.452,-379.653,297.7903",
+      "Rotation": "-0.1448582,0.2860239,0.4279631,0.8450171",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.CameraComponent",
+          "__guid": "cf3cbf96-22b6-4be4-a5d0-672a96c17f9f",
+          "BackgroundColor": "0.33333,0.46275,0.52157,1",
+          "ClearFlags": "All",
+          "FieldOfView": 60,
+          "IsMainCamera": true,
+          "Orthographic": false,
+          "OrthographicHeight": 1204,
+          "Priority": 1,
+          "RenderExcludeTags": "",
+          "RenderTags": "",
+          "TargetEye": "None",
+          "Viewport": "0,0,1,1",
+          "ZFar": 10000,
+          "ZNear": 10
+        },
+        {
+          "__type": "Sandbox.Bloom",
+          "__guid": "d73ef723-c888-41d4-802e-f797c79318be",
+          "BloomColor": {
+            "blend": "Linear",
+            "color": [
+              {
+                "t": 0,
+                "c": "1,1,1,1"
+              },
+              {
+                "t": 1,
+                "c": "1,1,1,1"
+              }
+            ],
+            "alpha": []
+          },
+          "BloomCurve": [
+            {
+              "x": 0,
+              "y": 0.5,
+              "in": 0,
+              "out": 0,
+              "mode": "Mirrored"
+            },
+            {
+              "x": 1,
+              "y": 1,
+              "in": 0,
+              "out": 0,
+              "mode": "Mirrored"
+            }
+          ],
+          "Mode": "Additive",
+          "Strength": 0.5,
+          "Threshold": 0.5,
+          "ThresholdWidth": 0.5
+        },
+        {
+          "__type": "Sandbox.Tonemapping",
+          "__guid": "9d76f362-7227-40eb-a189-69353c780c46",
+          "__version": 1,
+          "AutoExposureEnabled": true,
+          "ExposureBias": 2,
+          "ExposureCompensation": 0,
+          "ExposureMethod": "RGB",
+          "MaximumExposure": 2,
+          "MinimumExposure": 1,
+          "Mode": "Legacy",
+          "Rate": 1
+        },
+        {
+          "__type": "Sandbox.Sharpen",
+          "__guid": "0bffee5e-19f2-41c4-88f9-faefbcce6bf4",
+          "Scale": 0.2
+        }
+      ]
+    },
+    {
+      "__guid": "62ff5cd7-47c1-46ae-9096-991a22450b7a",
+      "Flags": 0,
+      "Name": "GameNetwork",
+      "Position": "-126.4293,-187.5311,115.5769",
+      "NetworkMode": 1,
+      "Components": [
+        {
+          "__type": "GameNetwork",
+          "__guid": "52ebdfe7-c3cb-415b-9247-39f606a5e97b",
+          "MinimumPlayers": 2,
+          "P_PlayersCount": 0,
+          "PlayerPrefab": {
+            "_type": "gameobject",
+            "prefab": "prefabs/player.prefab"
+          },
+          "ScreensFolder": {
+            "_type": "gameobject",
+            "go": "0c7ac793-5464-44fa-8e36-983f8218b1d8"
+          },
+          "State": "Loading"
+        }
+      ]
+    },
+    {
+      "__guid": "0c7ac793-5464-44fa-8e36-983f8218b1d8",
+      "Flags": 0,
+      "Name": "Screens",
+      "Position": "-126.4293,-187.5311,115.5769",
+      "Enabled": true,
+      "Children": [
+        {
+          "__guid": "5b0985ae-d229-4634-a846-30140f13c4b7",
+          "Flags": 0,
+          "Name": "GameSearchingPlayer",
+          "Components": [
+            {
+              "__type": "Sandbox.ScreenPanel",
+              "__guid": "b81ab94b-7bf2-48be-aff3-fbaf5602f513",
+              "AutoScreenScale": true,
+              "Opacity": 1,
+              "Scale": 1,
+              "ScaleStrategy": "ConsistentHeight",
+              "ZIndex": 100
+            },
+            {
+              "__type": "Sandbox.GameSearchingUI",
+              "__guid": "1dba1619-0381-481f-bee9-3b95fc93f802",
+              "GameNetwork": {
+                "_type": "component",
+                "component_id": "52ebdfe7-c3cb-415b-9247-39f606a5e97b",
+                "go": "62ff5cd7-47c1-46ae-9096-991a22450b7a",
+                "component_type": "GameNetwork"
+              },
+              "MyStringValue": "Hello World!"
+            }
+          ]
+        },
+        {
+          "__guid": "96210ade-cb68-4a27-82e3-e4d08d7dcfeb",
+          "Flags": 0,
+          "Name": "DebugOverlay",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.ScreenPanel",
+              "__guid": "845df1d8-fb88-4907-94d6-00c22638bc4f",
+              "AutoScreenScale": true,
+              "Opacity": 1,
+              "Scale": 1,
+              "ScaleStrategy": "ConsistentHeight",
+              "ZIndex": 100
+            },
+            {
+              "__type": "Sandbox.DebugUI",
+              "__guid": "5264fdbc-1e52-4515-96fe-f709ae64bca6",
+              "Player": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "__guid": "743ee0aa-23fc-40e2-a261-63c428e52b8b",
+      "Flags": 0,
+      "Name": "GameObject",
+      "Enabled": true
+    },
+    {
+      "__guid": "60003dbc-39e3-47d2-b7dd-dde9231fbfb3",
+      "Flags": 0,
+      "Name": "narutov2",
+      "Position": "-77.86407,-150.1965,0.627327",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.SkinnedModelRenderer",
+          "__guid": "2066d695-227e-4ebd-9b5a-390af9447e4c",
+          "AnimationGraph": "models/naruto/extracted/main.vanmgrph",
+          "BodyGroups": 7,
+          "CreateAttachments": false,
+          "CreateBoneObjects": true,
+          "Model": "models/naruto/extracted/narutov2.vmdl",
+          "Morphs": {},
+          "Parameters": {
+            "bools": {},
+            "ints": {},
+            "floats": {},
+            "vectors": {},
+            "rotations": {}
+          },
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderType": "On",
+          "Sequence": {
+            "Name": null
+          },
+          "Tint": "1,1,1,1",
+          "UseAnimGraph": true
+        },
+        {
+          "__type": "Sandbox.ModelCollider",
+          "__guid": "ad624669-bf12-4a18-92d4-1ab5e52d23d5",
+          "IsTrigger": false,
+          "Model": "models/naruto/extracted/narutov2.vmdl",
+          "Static": false,
+          "SurfaceVelocity": "0,0,0"
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "4a93a937-82cc-4b47-88fc-3bcb5fb27d72",
+          "AngularDamping": 0,
+          "Gravity": true,
+          "LinearDamping": 0,
+          "Locking": {
+            "X": false,
+            "Y": false,
+            "Z": false,
+            "Pitch": false,
+            "Yaw": false,
+            "Roll": false
+          },
+          "MassCenterOverride": "0,0,0",
+          "MassOverride": 0,
+          "MotionEnabled": true,
+          "OverrideMassCenter": false,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
+        },
+        {
+          "__type": "TestColliderAttack",
+          "__guid": "0f58bfce-0786-48c0-9f8a-332d79c73e67",
+          "Collider": {
+            "_type": "component",
+            "component_id": "a7171b66-5014-4287-a835-fea46d5cd16b",
+            "go": "88ac52c5-7eb2-4be7-b5e7-e2389d321ee8",
+            "component_type": "BoxCollider"
+          },
+          "ModelRenderer": {
+            "_type": "component",
+            "component_id": "2066d695-227e-4ebd-9b5a-390af9447e4c",
+            "go": "60003dbc-39e3-47d2-b7dd-dde9231fbfb3",
+            "component_type": "SkinnedModelRenderer"
+          }
+        }
+      ],
+      "Children": [
+        {
+          "__guid": "a8b304f8-bca2-45ed-a230-7b4ca8b9fc03",
+          "Flags": 4,
+          "Name": "ValveBiped_Bip01_L_Thigh",
+          "Position": "0.0000004277099,4.046064,40",
+          "Rotation": "-0.4855116,0.5115467,0.5140311,0.488232",
+          "Enabled": true,
+          "Children": [
+            {
+              "__guid": "25eae138-a697-4a24-a0d3-dd85d0000111",
+              "Flags": 4,
+              "Name": "ValveBiped_Bip01_L_Calf",
+              "Position": "18.56209,-0.000001192093,-0.00000333786",
+              "Rotation": "0.0000001731058,-0.00000004816161,0.0170991,0.9998538",
+              "Enabled": true,
+              "Children": [
+                {
+                  "__guid": "88ac52c5-7eb2-4be7-b5e7-e2389d321ee8",
+                  "Flags": 1028,
+                  "Name": "ValveBiped_Bip01_L_Foot",
+                  "Position": "17.18622,-0.000004291534,-0.000003814697",
+                  "Rotation": "-0.02080507,-0.0115452,-0.5106096,0.8594834",
+                  "Enabled": true,
+                  "Components": [
+                    {
+                      "__type": "Sandbox.BoxCollider",
+                      "__guid": "a7171b66-5014-4287-a835-fea46d5cd16b",
+                      "Center": "0,0,0",
+                      "IsTrigger": true,
+                      "Scale": "10,10,10",
+                      "Static": false,
+                      "SurfaceVelocity": "0,0,0"
+                    }
+                  ],
+                  "Children": [
+                    {
+                      "__guid": "68ae5e38-c2d2-4aeb-b97d-263ccc212a66",
+                      "Flags": 4,
+                      "Name": "ValveBiped_Bip01_L_Toe0",
+                      "Position": "3.058607,-6.192202,0.05851841",
+                      "Rotation": "-0.005550401,-0.001129449,-0.2880476,0.9575993",
+                      "Enabled": true
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "bb6423f3-0db0-4c72-b13b-104b3c2a4782",
+          "Flags": 4,
+          "Name": "ValveBiped_Bip01_R_Thigh",
+          "Position": "-0.000007219554,-4.046058,39.99999",
+          "Rotation": "-0.4881951,0.5140712,0.5115061,0.4855488",
+          "Enabled": true,
+          "Children": [
+            {
+              "__guid": "889627ec-cc92-4fb0-9ff6-e931aabe0cf5",
+              "Flags": 4,
+              "Name": "ValveBiped_Bip01_R_Calf",
+              "Position": "18.56207,-0.000006914139,0.000001907349",
+              "Rotation": "0.0000005820091,-0.0000001153229,0.01709913,0.9998538",
+              "Enabled": true,
+              "Children": [
+                {
+                  "__guid": "86431299-fbf6-4eb4-989d-f2c843d59a64",
+                  "Flags": 4,
+                  "Name": "ValveBiped_Bip01_R_Foot",
+                  "Position": "17.18624,-0.000005722046,-0.000001430511",
+                  "Rotation": "0.02865361,0.006803066,-0.5106952,0.8592573",
+                  "Enabled": true,
+                  "Children": [
+                    {
+                      "__guid": "570a6d8f-4c4a-46db-a020-4ab1e3417096",
+                      "Flags": 4,
+                      "Name": "ValveBiped_Bip01_R_Toe0",
+                      "Position": "3.058618,-6.192228,0.05556011",
+                      "Rotation": "-0.0410914,0.009778307,-0.2878838,0.9567334",
+                      "Enabled": true
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "85e787b6-9a98-4ecc-8907-a9448e2ec5b4",
+          "Flags": 4,
+          "Name": "ValveBiped_Bip01_Spine",
+          "Position": "-3.101162,0.00001113774,43.47892",
+          "Rotation": "0.4787757,0.5203596,0.5203598,-0.4787749",
+          "Enabled": true,
+          "Children": [
+            {
+              "__guid": "7a59b4e3-a31e-476d-9b71-a415e320e315",
+              "Flags": 4,
+              "Name": "ValveBiped_Bip01_Spine1",
+              "Position": "4.155621,0.00001311302,0.00001267647",
+              "Rotation": "0.000000159616,-0.00000003591833,-0.01440753,0.9998963",
+              "Enabled": true,
+              "Children": [
+                {
+                  "__guid": "d56c5e5a-5792-4acf-b800-ec4b0160c3c3",
+                  "Flags": 4,
+                  "Name": "ValveBiped_Bip01_Spine2",
+                  "Position": "3.66111,0.000009775162,0.00001307183",
+                  "Rotation": "-0.00000104842,0.000000003731067,0.04863434,0.9988166",
+                  "Enabled": true,
+                  "Children": [
+                    {
+                      "__guid": "7ddc592c-ed88-40ff-b0dc-f28cc0b2f5e1",
+                      "Flags": 4,
+                      "Name": "ValveBiped_Bip01_Spine4",
+                      "Position": "9.278301,0.00001645088,0.00001817332",
+                      "Rotation": "0.000001315695,-0.0000002970036,0.09307173,0.9956594",
+                      "Enabled": true,
+                      "Children": [
+                        {
+                          "__guid": "7b7a8508-ac60-4f7d-9e5d-962d20116531",
+                          "Flags": 4,
+                          "Name": "ValveBiped_Bip01_Head1",
+                          "Position": "6.880054,1.479819,-0.0000424121",
+                          "Rotation": "0.9999999,0.0005383905,-0.0000003237052,0.0000009682503",
+                          "Enabled": true
+                        },
+                        {
+                          "__guid": "6268ca47-6103-4ab4-b30c-4c313d3654a4",
+                          "Flags": 4,
+                          "Name": "ValveBiped_Bip01_L_Clavicle",
+                          "Position": "2.141857,1.017076,2.015186",
+                          "Rotation": "0.4727534,0.5283566,0.5987578,-0.3726026",
+                          "Enabled": true,
+                          "Children": [
+                            {
+                              "__guid": "d30e6961-c361-425a-8448-a05de27ece8b",
+                              "Flags": 4,
+                              "Name": "ValveBiped_Bip01_L_UpperArm",
+                              "Position": "6.269289,-0.00003433228,0.00003457069",
+                              "Rotation": "-0.6250137,0.2069544,-0.1992771,0.7258211",
+                              "Enabled": true,
+                              "Children": [
+                                {
+                                  "__guid": "001aafc1-9ba2-468a-9bb5-5a1ea240ad3a",
+                                  "Flags": 4,
+                                  "Name": "ValveBiped_Bip01_L_Forearm",
+                                  "Position": "12.16028,-0.00003528595,-0.00003051758",
+                                  "Rotation": "-0.0000002310734,0.00000009235948,-0.0301815,0.9995444",
+                                  "Enabled": true,
+                                  "Children": [
+                                    {
+                                      "__guid": "1a006087-173d-469f-98eb-d1d29b2e98a9",
+                                      "Flags": 4,
+                                      "Name": "ValveBiped_Bip01_L_Hand",
+                                      "Position": "11.94096,-0.00004005432,-0.0001029968",
+                                      "Rotation": "0.7062206,-0.0009829691,0.02641375,0.7074984",
+                                      "Enabled": true
+                                    },
+                                    {
+                                      "__guid": "1c77922c-ccb8-4f6c-af70-4df976e63744",
+                                      "Flags": 4,
+                                      "Name": "ValveBiped_Bip01_L_Wrist",
+                                      "Position": "11.94098,-0.00003623962,-0.00002288818",
+                                      "Rotation": "-0.000502475,0.00000009156071,0.00000006332998,0.9999999",
+                                      "Enabled": true
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "__guid": "5bcd920a-2ce7-41b6-8a0b-92fc83d6e735",
+                          "Flags": 4,
+                          "Name": "ValveBiped_Bip01_R_Clavicle",
+                          "Position": "2.141876,1.017064,-2.015144",
+                          "Rotation": "-0.4590685,-0.5495161,0.5794,-0.3893376",
+                          "Enabled": true,
+                          "Children": [
+                            {
+                              "__guid": "aa06ece7-45ee-4207-8390-8a156b08d0ce",
+                              "Flags": 4,
+                              "Name": "ValveBiped_Bip01_R_UpperArm",
+                              "Position": "6.269259,-0.00006484985,-0.00001430511",
+                              "Rotation": "0.6588444,-0.2023362,-0.2044405,0.6951173",
+                              "Enabled": true,
+                              "Children": [
+                                {
+                                  "__guid": "8b167758-da51-45a9-b39d-25d8843b5d3c",
+                                  "Flags": 4,
+                                  "Name": "ValveBiped_Bip01_R_Forearm",
+                                  "Position": "12.16027,-0.00001621246,0.00005340576",
+                                  "Rotation": "-0.00000001863495,0.00000001176331,-0.03018116,0.9995444",
+                                  "Enabled": true,
+                                  "Children": [
+                                    {
+                                      "__guid": "62ec4497-9674-4fe9-a877-a44d671d9b0d",
+                                      "Flags": 4,
+                                      "Name": "ValveBiped_Bip01_R_Hand",
+                                      "Position": "11.94098,-0.00001573563,0.00008773804",
+                                      "Rotation": "-0.7032789,0.00108985,0.02640688,0.7104226",
+                                      "Enabled": true
+                                    },
+                                    {
+                                      "__guid": "ecb238f2-e62e-4203-b9be-55cd09dca4d2",
+                                      "Flags": 4,
+                                      "Name": "ValveBiped_Bip01_R_Wrist",
+                                      "Position": "11.94098,-0.00001621246,0.00006484985",
+                                      "Rotation": "0.004254665,-0.00000005957612,0.0000000884765,0.999991",
+                                      "Enabled": true
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "__guid": "1542cfe6-4ee4-424e-b5ae-135c588f0cf4",
+      "Flags": 0,
+      "Name": "Cube (1)",
+      "Position": "-349.2718,906.0305,593.6077",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "edc81ab7-b409-4fb5-9d90-7a07bc194f63",
+          "BodyGroups": 18446744073709551615,
+          "CreateAttachments": false,
+          "Model": "models/dev/box.vmdl",
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Sandbox.BoxCollider",
+          "__guid": "a0f5c311-3c65-4f49-9aa0-c1a0bdca80fe",
+          "Center": "0,0,0",
+          "IsTrigger": false,
+          "Scale": "50,50,50",
+          "Static": false,
+          "SurfaceVelocity": "0,0,0"
+        }
+      ]
+    },
+    {
+      "__guid": "71386c07-4ad5-42ad-bc9e-dc3812e9bc95",
+      "Flags": 0,
+      "Name": "Cube",
+      "Position": "-260.2148,906.0305,593.6077",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "e0d1c12e-d183-4635-a7f9-3cd98875e5d6",
+          "BodyGroups": 18446744073709551615,
+          "CreateAttachments": false,
+          "Model": "models/dev/box.vmdl",
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "TestColliderAttack",
+          "__guid": "62f25053-3b5e-4fbc-9122-ab022d1ac370",
+          "Collider": {
+            "_type": "component",
+            "component_id": "ec54a9ed-cee9-4eed-9147-4de8489d2788",
+            "go": "71386c07-4ad5-42ad-bc9e-dc3812e9bc95",
+            "component_type": "BoxCollider"
+          }
+        },
+        {
+          "__type": "Sandbox.BoxCollider",
+          "__guid": "ec54a9ed-cee9-4eed-9147-4de8489d2788",
+          "Center": "0,0,0",
+          "IsTrigger": true,
+          "Scale": "50,50,50",
+          "Static": false,
+          "SurfaceVelocity": "0,0,0"
+        }
+      ]
+    }
+  ],
+  "SceneProperties": {
+    "FixedUpdateFrequency": 50,
+    "MaxFixedUpdates": 5,
+    "NetworkFrequency": 60,
+    "NetworkInterpolation": true,
+    "PhysicsSubSteps": 1,
+    "ThreadedAnimation": true,
+    "TimeScale": 1,
+    "UseFixedUpdate": true,
+    "Metadata": {
+      "Title": "minimal"
+    },
+    "NavMesh": {
+      "Enabled": false,
+      "IncludeStaticBodies": true,
+      "IncludeKeyframedBodies": true,
+      "EditorAutoUpdate": true,
+      "AgentHeight": 64,
+      "AgentRadius": 16,
+      "AgentStepSize": 18,
+      "AgentMaxSlope": 40,
+      "ExcludedBodies": "",
+      "IncludedBodies": ""
+    }
+  },
+  "ResourceVersion": 2,
+  "Title": "minimal",
+  "Description": null,
+  "__references": [],
+  "__version": 2
+}
